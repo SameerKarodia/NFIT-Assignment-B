@@ -109,6 +109,7 @@ int main() {
         fprintf(gnuplotPipe, "'signals.dat' using 1:3 title 'Signal 2' with lines, ");
         fprintf(gnuplotPipe, "'signals.dat' using 1:4 title 'Sum of Signals' with lines\n");
         fflush(gnuplotPipe);
+        system("pause");
         pclose(gnuplotPipe);
     } else {
         cerr << "Error: Could not open gnuplot for plotting.\n";
