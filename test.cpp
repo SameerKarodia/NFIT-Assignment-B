@@ -71,12 +71,6 @@ int main() {
     double angfre2=2*PI*fre2;
     double wavenum2=(2*PI)/wavelength2;
 
-
-    //calculate signals 1 and 2 with the equation 
-
-    double D1= amp1 * sin ( (wavenum1 * x1) + (angfre1 * t1) +iniphase1 );
-    double D2= amp2 * sin ( (wavenum2 * x2) + (angfre2 * t2) +iniphase2 );
-
     // Prepare data for plotting
     ofstream data("signals.dat"); // File to store the data
 
