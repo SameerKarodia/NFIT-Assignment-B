@@ -100,7 +100,7 @@ int main() {
     data.close();
 
     // Plotting using gnuplot
-    FILE *gnuplotPipe = FILE* gnuplotPipe = _popen("C:\\\"Program Files\"\\gnuplot\\bin\\gnuplot.exe", "w");;
+    FILE* gnuplotPipe = _popen("C:\\\"Program Files\"\\gnuplot\\bin\\gnuplot.exe", "w");;
     if (gnuplotPipe) {
         fprintf(gnuplotPipe, "set title 'Signal Interference'\n");
         fprintf(gnuplotPipe, "set xlabel 'Distance or Time'\n");
