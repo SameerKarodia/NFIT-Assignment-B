@@ -81,7 +81,7 @@ int main() {
     ofstream data("signals.dat"); // File to store the data
 
     double x_max = 10; // Maximum distance or time for plotting
-    double x_step = 0.1; // Step size
+    double x_step = 0.005; // Step size
 
     // Generate signal values over a range and write to file
     for (double x = 0; x <= x_max; x += x_step) {
@@ -100,7 +100,7 @@ int main() {
     data.close();
 
     // Plotting using gnuplot
-    FILE *gnuplotPipe = popen("gnuplot -persistent", "w");
+    FILE *gnuplotPipe = FILE* gnuplotPipe = _popen("C:\\\"Program Files\"\\gnuplot\\bin\\gnuplot.exe", "w");;
     if (gnuplotPipe) {
         fprintf(gnuplotPipe, "set title 'Signal Interference'\n");
         fprintf(gnuplotPipe, "set xlabel 'Distance or Time'\n");
@@ -110,7 +110,7 @@ int main() {
         fprintf(gnuplotPipe, "'signals.dat' using 1:4 title 'Sum of Signals' with lines\n");
         fflush(gnuplotPipe);
         system("pause");
-        pclose(gnuplotPipe);
+        _pclose(gnuplotPipe);
     } else {
         cerr << "Error: Could not open gnuplot for plotting.\n";
     }
