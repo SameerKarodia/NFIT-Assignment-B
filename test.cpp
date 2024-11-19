@@ -33,8 +33,14 @@ int main() {
         }
     } while (fre1 <= 0);
 
-    cout << "Initial phase in radians: " << endl;
-    cin >> iniphase1;
+    do {
+        cout << "Initial phase in radians: " << endl;
+        cin >> iniphase1;
+        cout<<iniphase1;
+        if (iniphase1 < 0 || iniphase1 > 6.28) {
+            cout << "Error: Initial phase must be between 0 and 2Pi value.\n";
+        }
+    } while (iniphase1 < 0 || iniphase1 > 6.28);
 
     //input handling for t1 and x1
     do {
@@ -94,8 +100,14 @@ int main() {
         }
     } while (fre2 <= 0);
 
-    cout << "Initial phase in radians: " << endl;
-    cin >> iniphase2;
+    do {
+        cout << "Initial phase in radians: " << endl;
+        cin >> iniphase2;
+        cout<<iniphase2;
+        if (iniphase2 < 0 || iniphase2 > 6.28) {
+            cout << "Error: Initial phase must be between 0 and 2Pi value.\n";
+        }
+    } while (iniphase2 < 0 || iniphase2 > 6.28);
 
     //input handling for t2 and x2
     do {
